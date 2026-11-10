@@ -1,10 +1,9 @@
-# Deploy this blueprint using backend as the Docker build context.
+# Deploy this blueprint from the repository root.
 services:
   - type: web
     name: edusphere-api
     runtime: docker
     plan: starter
-    rootDir: backend
     healthCheckPath: /api/v1/health
     envVars:
       - key: APP_ENV
